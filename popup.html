@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>PolyScope</title>
+        <script src="jquery.js"></script>
+        <script src="js-summarize.js"></script>
+        <script src="tokenizer.js"></script>
+        <script src="lodash.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <style type="text/CSS">
+
+            h1{
+                font-size:15px;
+            }
+
+            h2{
+                font-size:15px
+            }
+            .center{
+                text-align:center;
+            }
+            .whiteText{
+                color:white;
+                font-family: "Alfa Slab One";
+                font-size:20px;
+                float:left;
+            }             
+            #header{
+                width: 300px;
+                height:60px;
+                background-color: rgb(37, 37, 37);
+                padding: 10px;
+                position:relative;
+                left:-10px;
+                top:-10px;
+            }
+            body {
+                min-width: 300px;
+                max-width: 300px;
+                min-height:300px;
+                max-height:300px;
+            }
+            #menuBar{
+                top:-10%;
+                height:60px;
+                width:80%;
+                margin-left:17%;
+                margin-bottom:0px;
+            }
+            #menuLogo{
+                width:50px;
+                height:50px;
+                float:left;
+                margin:10px;
+            }
+            #text{
+                position:relative;
+                top:-20px;
+                padding:10px;
+                padding-bottom: 0px;
+            }
+            .button{
+                background-color: black;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: -15px 2px 4px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                width:100%;
+            }
+            .buttonBlack {
+                background-color: white;
+                color: black;
+                border: 2px solid #555555;
+            }
+            .buttonBlack:hover {
+                background-color: #555555;
+                color: white;
+            }
+            #results {
+                position: relative;
+                min-width: 300px;
+                max-width: 300px;
+            }
+            #list{
+                width:80%;
+            }
+        </style>
+
+
+    </head>
+    <body>
+
+        <div id="header">
+            <div id="menuBar">     
+                <img id="menuLogo" src="images/polyscopeWhite.png">
+                <p class="whiteText">PolyScope</p>
+            </div>
+        </div>
+
+        <div id="text"> 
+            <h1 class="center">
+                Learn Faster
+            </h1>
+
+            <span>
+                <hr>
+                <h1>Don't Waste Your Time</h1>
+                <p>Get only the most important parts of an article.</p>
+            </span>
+
+            <span>
+                <hr>
+                <h1>Powered By AI</h1>
+                <p>AI summarization and web scrappers find the details so you don't have to.</p>
+            </span>
+            
+             <hr>
+        </div>
+
+        <div id="results">
+            <button id="sum" class="button buttonBlack">Summarize</button>
+
+            <script src="popup.js"></script>
+
+            <hr>
+
+            <ul id="list"></ul>
+        </div>
+
+    </body>
+</html>
