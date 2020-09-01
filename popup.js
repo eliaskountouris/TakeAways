@@ -1,3 +1,4 @@
+//injects grabText content script
 window.onload = function(){
     chrome.tabs.query({currentWindow: true, active: true},
         function(tabs){
@@ -5,7 +6,7 @@ window.onload = function(){
         })
 }
 
-
+//sends message when Summarize pressed
 document.addEventListener("DOMContentLoaded", function () {document.querySelector('button').addEventListener('click',onclick,false) 
 function onclick(){
     chrome.tabs.query({currentWindow: true, active: true},
@@ -14,21 +15,15 @@ function onclick(){
     })
 }
 
+//requests text from grabText
 function getText (text) {
     var summarizer = new JsSummarize();
     var summary = summarizer.summarize("Summary", String(text));
     addText(summary);
-    /*
-    Code for posting summary on website
-    
-    chrome.tabs.query(
-    {currentWindow: true, active: true},
-    function(tabs){
-        chrome.tabs.sendMessage(tabs[0].id, summary)
-    }); 
-    */
+
 }
 
+//posts text
 function addText(texts){
     var ul = document.getElementById("list")
 
